@@ -2,6 +2,8 @@ backend:
   name: github
   repo: tomoyuki-hata/decapcms-deploy-test
   branch: main # Branch to update (optional; defaults to master)
+  client_id: 1a292f8af667608fbac8
+  client_secret: b5289402017b5a1663567f587af428001de1baab
 
 local_backend: true
 
