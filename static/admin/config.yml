@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: tomoyuki-hata/decapcms-deploy-test
+  branch: main # Branch to update (optional; defaults to master)
+
+local_backend: true
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "page"
+    label: "Page"
+    folder: "content/page"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
